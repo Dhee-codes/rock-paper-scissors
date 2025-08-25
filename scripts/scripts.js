@@ -40,14 +40,10 @@ function playRound(humanChoice, computerChoice) {
         ++computerScore;
         message = "You lose!";
     } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
-        ++shumanScore;
+        ++humanScore;
         message = "You win!";
     }
     return `${message}\nPlayer ${humanChoice} : Computer ${computerChoice}`;
-}
-
-function scores() {
-
 }
 
 function playGame() {
@@ -59,6 +55,7 @@ function playGame() {
         console.log(playRound(humanChoice, computerChoice));
         game++;
     }
+    return `Final Scores:\nPlayer: ${humanScore}\nComputer: ${computerScore}`;
 }
 
 let humanScore = 0;
