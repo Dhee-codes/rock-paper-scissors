@@ -20,45 +20,45 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-function playRound(humanChoice, computerChoice) {
-    let message;
-    if (humanChoice == computerChoice) {
-        message = "It's a tie!";
-    } else if (humanChoice == "Rock" && computerChoice == "Paper") {
-        ++computerScore;
-        message = "You lose!";
-    } else if (humanChoice == "Rock" && computerChoice == "Scissors") {
-        ++humanScore;
-        message = "You win!";
-    } else if (humanChoice == "Paper" && computerChoice == "Rock") {
-        ++humanScore;
-        message = "You win!";
-    } else if (humanChoice == "Paper" && computerChoice == "Scissors") {
-        ++computerScore;
-        message = "You lose!";
-    } else if (humanChoice == "Scissors" && computerChoice == "Rock") {
-        ++computerScore;
-        message = "You lose!";
-    } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
-        ++humanScore;
-        message = "You win!";
-    }
-    return `${message}\nPlayer ${humanChoice} : Computer ${computerChoice}`;
-}
-
 function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
+
+        let message;
+        
+        if (humanChoice == computerChoice) {
+            message = "It's a tie!";
+        } else if (humanChoice == "Rock" && computerChoice == "Paper") {
+            ++computerScore;
+            message = "You lose!";
+        } else if (humanChoice == "Rock" && computerChoice == "Scissors") {
+            ++humanScore;
+            message = "You win!";
+        } else if (humanChoice == "Paper" && computerChoice == "Rock") {
+            ++humanScore;
+            message = "You win!";
+        } else if (humanChoice == "Paper" && computerChoice == "Scissors") {
+            ++computerScore;
+            message = "You lose!";
+        } else if (humanChoice == "Scissors" && computerChoice == "Rock") {
+            ++computerScore;
+            message = "You lose!";
+        } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
+            ++humanScore;
+            message = "You win!";
+        }
+        console.log(`${message}\nPlayer ${humanChoice} : Computer ${computerChoice}`);
+    }
+    
     const ROUNDS = 5;
-    let game = 0;
-    while (game < ROUNDS) {
-        let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
+    for (let i = 0; i < ROUNDS; i++) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
         console.log(playRound(humanChoice, computerChoice));
-        game++;
     }
     return `Final Scores:\nPlayer: ${humanScore}\nComputer: ${computerScore}`;
 }
-
-let humanScore = 0;
-let computerScore = 0;
 
 console.log(playGame());
