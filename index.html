@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+
+    <h1>Rock Paper Scissors</h1>
+    <div class="game-container">
+        <div class="score-container">
+            <div class="sect player">
+                <div class="agent">
+                    PLAYER
+                </div>
+                <div class="score">
+                    <span id="player-score">0</span>
+                </div>
+            </div>
+            <div class="rounds">
+                ROUNDS
+                <div>
+                    <span id="rounds">0</span>
+                </div>
+            </div>
+            <div class="sect computer">
+                <div class="agent">
+                    COMPUTER
+                </div>
+                <div class="score">
+                    <span id="computer-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="choices">
+            <button><img class="rock" src="assets/images/choices/rock.svg" alt="Rock hand sign"></button>
+            <button><img class="paper" src="assets/images/choices/paper.svg" alt="Paper hand sign"></button>
+            <button><img class="scissors" src="assets/images/choices/scissors.svg" alt="Scissors hand sign"></button>
+        </div>
+
+        <div id="result-message">
+            <p>Make your move!</p>
+        </div>
+
+        <button class="reset" id="reset-button">Reset Game</button>
+    </div>
+
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
