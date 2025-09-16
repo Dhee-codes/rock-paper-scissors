@@ -1,6 +1,7 @@
 function playGame() {
-    let humanScore = 0;
+    let playerScore = 0;
     let computerScore = 0;
+    let rounds = 0;
 
     function getComputerChoice() {
         let move = Math.floor(Math.random() * 3);
@@ -11,30 +12,34 @@ function playGame() {
 
     function playRound(humanChoice) {
         const computerChoice = getComputerChoice();
+        rounds++;
 
-        let message;
+        let result;
         
         if (humanChoice === computerChoice) {
-            message = "It's a tie!";
+            result = "It's a tie!";
         } else if (
                     (humanChoice == "Rock" && computerChoice == "Scissors") ||
                     (humanChoice == "Paper" && computerChoice == "Rock") ||
                     (humanChoice == "Scissors" && computerChoice == "Paper")
                 ) {
-            humanScore++;
-            message = "You Win!";
+            playerScore++;
+            result = "You Win! ";
         } else {
             computerScore++;
-            message = "You Lose!"
+            result = "You Lose! "
         }
-        console.log(`${message}\nYou chose ${humanChoice} : Computer chose ${computerChoice}`);
+        document.querySelector("#rounds").textContent = rounds;
+        document.querySelector("#player-score").textContent = playerScore;
+        document.querySelector("#computer-score").textContent = computerScore;
+
+        document.querySelector("#result-message").textContent = `${result} You chose ${humanChoice} and the computer chose ${computerChoice}`;
     }
 
     document.querySelector(".rock").addEventListener("click", () => playRound("Rock"));
     document.querySelector(".paper").addEventListener("click", () => playRound("Paper"));
     document.querySelector(".scissors").addEventListener("click", () => playRound("Scissors"));
-    
-    // console.log(`Final Scores:\nPlayer: ${humanScore}\nComputer: ${computerScore}`);
+    // console.log(`Final Scores:\nPlayer: ${playerScore}\nComputer: ${computerScore}`);
 }
 
 playGame();

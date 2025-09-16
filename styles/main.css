@@ -16,10 +16,6 @@ h1 {
     margin: 2.5rem 0 2rem;
 }
 
-p {
-    font-size: 1.4rem;
-}
-
 .game-container {
     width: 100vw;
     padding: 1px;
@@ -91,6 +87,16 @@ button {
     overflow: hidden;
     border: 2px solid #e6e6ff;
     border-radius: 50%;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.choices button:hover {
+    transform: scale(1.09);
+}
+
+.choices button:active {
+    transform: scale(0.9);
 }
 
 .choices .rock {
@@ -105,6 +111,10 @@ button {
     width: 50%;
 }
 
+.message {
+    font-size: 1.4rem;
+}
+
 .reset {
     color: #1e1e1e;
     background-color: #e6e6ff;
@@ -112,4 +122,14 @@ button {
     border: none;
     margin-top: 24px;
     padding: 8px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.reset:hover {
+    background-color: #a1a1b3;
+}
+
+.reset:active {
+    transform: scale(0.9);
 }
