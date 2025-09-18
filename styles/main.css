@@ -99,6 +99,10 @@ button {
     transform: scale(0.9);
 }
 
+.choices button:focus {
+    box-shadow: 0 0 12px #e6e6ff;
+}
+
 .choices .rock {
     width: 65%;
 }
