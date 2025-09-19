@@ -91,6 +91,8 @@ button:focus {
     overflow: hidden;
     border: 2px solid #e6e6ff;
     border-radius: 50%;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
     transform: scale(1);
     transition: transform 0.3s ease;
 }
