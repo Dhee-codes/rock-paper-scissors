@@ -80,6 +80,10 @@ button {
     cursor: pointer;
 }
 
+button:focus {
+    box-shadow: 0 0 12px #e6e6ff;
+}
+
 .choices button {
     background-color: #1e1e1e;
     width: 10rem;
@@ -99,10 +103,6 @@ button {
     transform: scale(0.9);
 }
 
-.choices button:focus {
-    box-shadow: 0 0 12px #e6e6ff;
-}
-
 .choices .rock {
     width: 65%;
 }
@@ -120,6 +120,7 @@ button {
 }
 
 .reset {
+    display: none;
     color: #1e1e1e;
     background-color: #e6e6ff;
     font-weight: 900;

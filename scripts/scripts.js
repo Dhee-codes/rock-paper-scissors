@@ -37,7 +37,7 @@ function playGame() {
         document.querySelector("#player-score").textContent = playerScore;
         document.querySelector("#computer-score").textContent = computerScore;
 
-        document.querySelector("#result-message").textContent = `${result} You chose ${humanChoice} and the computer chose ${computerChoice}`;
+        document.querySelector("#result-message").textContent = `${result}- You chose ${humanChoice} and the computer chose ${computerChoice}`;
 
         if (rounds === 0) {
             let finalMessage;
@@ -46,12 +46,17 @@ function playGame() {
             else if (playerScore < computerScore) finalMessage = "Computer won the game!";
             else finalMessage = "It's a tie game!";
             document.querySelector("#result-message").textContent = ` ${finalMessage} Final Scores: Player: ${playerScore} Computer: ${computerScore}`;
+            document.querySelector("#play-again").style.display = "inline-block";
+            
+            document.querySelector("#play-again").addEventListener("click", () => {
+                document.querySelector("#play-again").style.display = "none";
+            })
         }
     }
 
-    document.querySelector(".rock").addEventListener("click", () => playRound("Rock"));
-    document.querySelector(".paper").addEventListener("click", () => playRound("Paper"));
-    document.querySelector(".scissors").addEventListener("click", () => playRound("Scissors"));
+    document.querySelector("#rock").addEventListener("click", () => playRound("Rock"));
+    document.querySelector("#paper").addEventListener("click", () => playRound("Paper"));
+    document.querySelector("#scissors").addEventListener("click", () => playRound("Scissors"));
 
     function resetGame() {
         playerScore = 0;
@@ -62,6 +67,7 @@ function playGame() {
         document.querySelector("#player-score").textContent = playerScore;
         document.querySelector("#computer-score").textContent = computerScore;
         document.querySelector("#result-message").textContent = "Make your move!";
+
     }
 
     document.querySelector("#play-again").addEventListener("click", resetGame);
