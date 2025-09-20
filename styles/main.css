@@ -80,10 +80,6 @@ button {
     cursor: pointer;
 }
 
-button:focus {
-    box-shadow: 0 0 12px #e6e6ff;
-}
-
 .choices button {
     background-color: #1e1e1e;
     width: 10rem;
@@ -93,8 +89,9 @@ button:focus {
     border-radius: 50%;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     transform: scale(1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .choices button:hover {
