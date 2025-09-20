@@ -46,11 +46,12 @@ function playGame() {
             else if (playerScore < computerScore) finalMessage = "Computer won the game!";
             else finalMessage = "It's a tie game!";
             document.querySelector("#result-message").textContent = ` ${finalMessage} Final Scores: Player: ${playerScore} Computer: ${computerScore}`;
+
+            document.querySelectorAll('.choice').forEach(btn => {
+                btn.classList.add('disabled');
+            });
+
             document.querySelector("#play-again").style.display = "inline-block";
-            
-            document.querySelector("#play-again").addEventListener("click", () => {
-                document.querySelector("#play-again").style.display = "none";
-            })
         }
     }
 
@@ -63,11 +64,16 @@ function playGame() {
         computerScore = 0;
         rounds = 5;
 
+        document.querySelectorAll('.choice').forEach(btn => {
+            btn.classList.remove('disabled');
+        });
+
         document.querySelector("#rounds").textContent = rounds;
         document.querySelector("#player-score").textContent = playerScore;
         document.querySelector("#computer-score").textContent = computerScore;
         document.querySelector("#result-message").textContent = "Make your move!";
 
+        document.querySelector("#play-again").style.display = "none";
     }
 
     document.querySelector("#play-again").addEventListener("click", resetGame);

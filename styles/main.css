@@ -91,7 +91,7 @@ button {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .choices button:hover {
@@ -112,6 +112,11 @@ button {
 
 .choices .scissors {
     width: 50%;
+}
+
+.choice.disabled {
+  pointer-events: none;
+  opacity: 0.8;
 }
 
 .message {
