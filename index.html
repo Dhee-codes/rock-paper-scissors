@@ -1,53 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
+  <div class="container game-container">
     <h1>Rock Paper Scissors</h1>
-    <div class="game-container">
-        <div class="score-container">
-            <div class="sect player">
-                <div class="agent">
-                    PLAYER
-                </div>
-                <div class="score">
-                    <span id="player-score">0</span>
-                </div>
-            </div>
-            <div class="rounds">
-                ROUNDS
-                <div>
-                    <span id="rounds">5</span>
-                </div>
-            </div>
-            <div class="sect computer">
-                <div class="agent">
-                    COMPUTER
-                </div>
-                <div class="score">
-                    <span id="computer-score">0</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="choices">
-            <button id="rock" class="choice"><img class="rock" src="assets/images/choices/rock.svg" alt="Rock hand sign"></button>
-            <button id="paper" class="choice"><img class="paper" src="assets/images/choices/paper.svg" alt="Paper hand sign"></button>
-            <button id="scissors" class="choice"><img class="scissors" src="assets/images/choices/scissors.svg" alt="Scissors hand sign"></button>
-        </div>
+    <div class="scoreboard">
+      <div class="card">
+        <div class="agent">PLAYER</div>
+        <div class="score"><span id="player-score">0</span></div>
+      </div>
 
-        <div class="message" id="result-message">
-            Make your move!
+      <div class="card trophy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e6e6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+          <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+          <path d="M4 22h16"></path>
+          <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+          <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+          <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+        </svg>
+        <div class="rounds">
+          ROUNDS <span id="rounds">5</span>
         </div>
+      </div>
 
-        <button class="reset" id="play-again">Play again!</button>
+      <div class="card">
+        <div class="agent">COMPUTER</div>
+        <div class="score"><span id="computer-score">0</span></div>
+      </div>
     </div>
 
-    <script src="scripts/scripts.js"></script>
+    <div class="game-area">
+      <div class="vs-section">
+        <div class="choice-display">
+          <p>PLAYER</p>
+          <div>
+            <img class="choice-container-player" src="" alt="">
+            <p class="capitalize"></p>
+          </div>
+        </div>
+
+        <div>VS</div> 
+
+        <div class="choice-display">
+          <p>COMPUTER</p>
+          <div>
+            <img class="choice-container-computer" src="" alt="">
+            <p class="capitalize"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="message" id="result-message">Make your move!</div>
+    </div>
+
+    <div class="choices">
+      <button id="rock" class="choice-button">
+        <img class="rock" src="assets/images/choices/Rock.svg" alt="Rock hand sign">
+      </button>
+      <button id="paper" class="choice-button">
+        <img class="paper" src="assets/images/choices/Paper.svg" alt="Paper hand sign">
+      </button>
+      <button id="scissors" class="choice-button">
+        <img class="scissors" src="assets/images/choices/Scissors.svg" alt="Scissors hand sign">
+      </button>
+    </div>
+
+    <button class="reset" id="play-again">Play again!</button>
+  </div>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
