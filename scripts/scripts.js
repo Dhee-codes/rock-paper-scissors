@@ -7,6 +7,7 @@ function playGame() {
     const computerScoreEl = document.querySelector("#computer-score");
     const roundsEl = document.querySelector("#rounds");
     const resultMessage = document.querySelector("#result-message");
+    const finalResultMessage = document.querySelector("#final-result-message");
 
     const playerImg = document.querySelector(".choice-container-player");
     const computerImg = document.querySelector(".choice-container-computer");
@@ -23,11 +24,11 @@ function playGame() {
     }
 
     function updateImages(playerChoice, computerChoice) {
-        playerImg.src = `assets/images/choices/${playerChoice}.svg`;
+        playerImg.src = `assets/images/choices/${playerChoice}.png`;
         playerImg.alt = `${playerChoice} hand sign`;
         playerLabel.textContent = playerChoice;
 
-        computerImg.src = `assets/images/choices/${computerChoice}.svg`;
+        computerImg.src = `assets/images/choices/${computerChoice}.png`;
         computerImg.alt = `${computerChoice} hand sign`;
         computerLabel.textContent = computerChoice;
 
@@ -60,7 +61,7 @@ function playGame() {
         roundsEl.textContent = rounds;
         playerScoreEl.textContent = playerScore;
         computerScoreEl.textContent = computerScore;
-        resultMessage.textContent = `${result} You chose ${humanChoice}, Computer chose ${computerChoice}.`;
+        resultMessage.textContent = result;
 
         if (rounds === 0) {
             endGame();
@@ -69,17 +70,19 @@ function playGame() {
 
     function endGame() {
         let finalMessage;
-        if (playerScore > computerScore) finalMessage = "You won the game!";
-        else if (playerScore < computerScore) finalMessage = "Computer won the game!";
+        if (playerScore > computerScore) finalMessage = "You win!";
+        else if (playerScore < computerScore) finalMessage = "Computer wins!";
         else finalMessage = "It's a tie game!";
 
-        resultMessage.textContent = `${finalMessage} Final Scores — Player: ${playerScore}, Computer: ${computerScore}.`;
+        finalResultMessage.textContent = finalMessage;
 
         document.querySelectorAll(".choice-button").forEach(btn => {
             btn.disabled = true;
         });
 
-        document.querySelector("#play-again").style.display = "inline-block";
+        document.querySelector(".round-session").style.display = "none";
+        document.querySelector(".round-end-session").style.display = "block";
+        resultMessage.style.display = "none";
     }
 
     function resetGame() {
@@ -102,7 +105,9 @@ function playGame() {
             btn.disabled = false;
         });
 
-        document.querySelector("#play-again").style.display = "none";
+        document.querySelector(".round-session").style.display = "flex";
+        document.querySelector(".round-end-session").style.display = "none";
+        resultMessage.style.display = "block";
     }
 
     document.querySelector("#rock").addEventListener("click", () => playRound("Rock"));
