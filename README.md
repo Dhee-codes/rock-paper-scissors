@@ -1,4 +1,4 @@
-# Rock Paper Scissors — Browser Game
+# Rock Paper Scissors
 
 A clean, interactive implementation of the classic **Rock Paper Scissors** game built with **HTML**, **CSS**, and **JavaScript**.  
 Designed for simplicity, responsiveness, and a modern dark-themed aesthetic, this project emphasizes modular logic, real-time UI updates, and smooth gameplay.
@@ -12,8 +12,7 @@ Designed for simplicity, responsiveness, and a modern dark-themed aesthetic, thi
 - [Folder Structure](#folder-structure)  
 - [How It Works](#how-it-works)  
 - [Setup & Running Locally](#setup--running-locally)  
-- [Gameplay & UI](#gameplay--ui)  
-- [Screenshots / Preview](#screenshots--preview)  
+- [Gameplay & UI](#gameplay--ui)
 - [Author](#author)  
 - [License](#license)  
 
