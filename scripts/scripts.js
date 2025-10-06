@@ -24,11 +24,11 @@ function playGame() {
     }
 
     function updateImages(playerChoice, computerChoice) {
-        playerImg.src = `assets/images/choices/${playerChoice}.png`;
+        playerImg.src = `images/${playerChoice}.png`;
         playerImg.alt = `${playerChoice} hand sign`;
         playerLabel.textContent = playerChoice;
 
-        computerImg.src = `assets/images/choices/${computerChoice}.png`;
+        computerImg.src = `images/${computerChoice}.png`;
         computerImg.alt = `${computerChoice} hand sign`;
         computerLabel.textContent = computerChoice;
 
