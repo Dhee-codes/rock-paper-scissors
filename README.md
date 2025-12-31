@@ -116,7 +116,7 @@ Or simply drag & drop the index.html file into any modern browser to play.
 
 ## Author
 
-**Dhee-codes**
+**divine-obiorah**
 
 ---
 
