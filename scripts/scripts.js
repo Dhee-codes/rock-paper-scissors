@@ -81,7 +81,7 @@ function playGame() {
         });
 
         document.querySelector(".round-session").style.display = "none";
-        document.querySelector(".round-end-session").style.display = "block";
+        document.querySelector(".round-end-session").style.display = "flex";
         resultMessage.style.display = "none";
     }
 
