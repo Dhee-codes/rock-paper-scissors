@@ -1,3 +1,11 @@
+:root {
+    --clr-blue-800: hsl(240, 61%, 12%);
+    --clr-blue-900: hsl(240, 100%, 2%);
+    --clr-text-100: hsl(240, 7%, 80%);
+    --clr-text-50: hsl(240, 18%, 70%);
+    --clr-shade: hsl(0, 0%, 0%);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,8 +13,8 @@
 }
 
 body {
-    color: #e6e6ff;
-    background-color: #1e1e1e;
+    color: var(--clr-text-100);
+    background-color: var(--clr-blue-900);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: grid;
     place-items: center;
@@ -14,7 +22,12 @@ body {
 }
 
 p {
-    color: #a1a1b3;
+    color: var(--clr-text-50);
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -45,11 +58,17 @@ p {
     }
 }
 
+.board-display,
+.game-area,
+.choice-button {
+    border: 2px solid var(--clr-text-100);
+    background-color:  var(--clr-blue-800);
+    box-shadow: 5px 5px 5px var(--clr-shade);
+}
+
 .board-display {
-    border: 2px solid #e6e6ff;
     border-radius: 10px;
     padding: min(1rem, 2.4vw);
-    background-color: #2b2b2b;
     display: grid;
     gap: 0.2rem;
 }
@@ -99,7 +118,6 @@ p {
 
 .game-area {
     min-height: 28vh;
-    border: 2px solid #e6e6ff;
     border-radius: 10px;
     padding: 0.8rem 0;
 }
@@ -176,8 +194,8 @@ p {
     width: 40%;
     padding: 0.75rem;
     border: none;
-    color: #1e1e1e;
-    background-color: #e6e6ff;
+    color: var(--clr-blue-900);
+    background-color: var(--clr-text-50);
     font-weight: 900;
     border-radius: 8px;
     cursor: pointer;
@@ -186,7 +204,7 @@ p {
 }
 
 .reset:hover {
-    background-color: #a1a1b3;
+    background-color: var(--clr-text-100);
 }
 
 .reset:active {
@@ -208,8 +226,6 @@ p {
 .choice-button {
     width: 100%;
     max-height: 4.6rem;
-    background-color: #1e1e1e;
-    border: 2px solid #e6e6ff;
     border-radius: 10px;
     padding: 1rem;
     display: flex;
@@ -225,8 +241,10 @@ p {
     }
 }
 
-.choice-button:hover {
-    transform: scale(1.05);
+@media (hover: hover) {
+    .choice-button:hover {
+        transform: scale(1.05);
+    }
 }
 
 .choices button:active {
