@@ -3,9 +3,15 @@
 A clean, interactive implementation of the classic **Rock Paper Scissors** game built with **HTML**, **CSS**, and **JavaScript**.  
 Designed for simplicity, responsiveness, and a modern dark-themed aesthetic, this project emphasizes modular logic, real-time UI updates, and smooth gameplay.
 
-## Screenshot
+## Demo
+
+### Screenshot
 
 ![Priview](images/screenshot.png)
+
+### Live Priview
+
+[GitHub Pages](https://Dhee-codes.github.io/rock-paper-scissors--tut)
 
 ## Features
 
