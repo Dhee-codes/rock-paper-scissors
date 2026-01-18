@@ -3,20 +3,9 @@
 A clean, interactive implementation of the classic **Rock Paper Scissors** game built with **HTML**, **CSS**, and **JavaScript**.  
 Designed for simplicity, responsiveness, and a modern dark-themed aesthetic, this project emphasizes modular logic, real-time UI updates, and smooth gameplay.
 
----
+## Screenshot
 
-## Table of Contents
-
-- [Features](#features)  
-- [Tech Stack](#tech-stack)  
-- [Folder Structure](#folder-structure)  
-- [How It Works](#how-it-works)  
-- [Setup & Running Locally](#setup--running-locally)  
-- [Gameplay & UI](#gameplay--ui)
-- [Author](#author)  
-- [License](#license)  
-
----
+![Priview](images/screenshot.png)
 
 ## Features
 
@@ -27,18 +16,11 @@ Designed for simplicity, responsiveness, and a modern dark-themed aesthetic, thi
 - **Custom Styling** – Modern dark theme implemented purely with CSS; no frameworks needed.  
 - **Responsive Layout** – Works on desktop and mobile devices using Flexbox and Grid.
 
----
-
 ## Tech Stack
 
-| Layer         | Technology |
-|---------------|------------|
-| Frontend      | HTML5, CSS3, JavaScript (ES6) |
-| Assets        | PNG hand icons (Rock, Paper, Scissors) |
-| Layout        | Flexbox & CSS Grid |
-| Compatibility | Chrome, Firefox, Edge, Safari |
-
----
+- HTML5
+- CSS
+- Vanilla JavaScript
 
 ## Folder Structure
 
@@ -62,8 +44,6 @@ rock-paper-scissors/
 └── README.md
 ```
 
----
-
 ## How It Works
 
 1. The player selects **Rock**, **Paper**, or **Scissors**.  
@@ -75,25 +55,6 @@ rock-paper-scissors/
 4. The scoreboard updates after each round.  
 5. After 5 rounds, the game session ends and the final result is displayed.  
 6. Clicking **Play Again** resets the session for a new game.
-
----
-
-## Setup & Running Locally
-
-```bash
-# Clone the repository
-git clone https://github.com/<your-username>/rock-paper-scissors.git
-
-# Navigate into the project folder
-cd rock-paper-scissors
-
-# Open in your browser
-open index.html
-```
-
-Or simply drag & drop the index.html file into any modern browser to play.
-
----
 
 ## Gameplay & UI
 
@@ -112,13 +73,28 @@ Or simply drag & drop the index.html file into any modern browser to play.
 4. **Play Again:**  
    - Click the **Play Again!** button to reset scores, clear choice images, and restart the game session.  
 
----
+## Setup & Running Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/rock-paper-scissors.git
+
+# Navigate into the project folder
+cd rock-paper-scissors
+
+# Open in your browser
+open index.html
+```
+
+Or simply drag & drop the index.html file into any modern browser to play.
 
 ## Author
 
-**divine-obiorah**
+***Dhee-codes***
 
----
+### Acknowledgement
+
+The Odin Project
 
 ## License
 
