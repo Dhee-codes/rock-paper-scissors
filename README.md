@@ -11,7 +11,7 @@ Designed for simplicity, responsiveness, and a modern dark-themed aesthetic, thi
 
 ### Live Priview
 
-[GitHub Pages](https://Dhee-codes.github.io/rock-paper-scissors--tut)
+[GitHub Pages](https://Dhee-codes.github.io/rock-paper-scissors)
 
 ## Features
 
